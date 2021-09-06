@@ -2,7 +2,10 @@
 Code for Directed and Undirected 'hasPath' is same
 we just have to store directional edge and
 not bidirectional edges in the data structures.
-hasPath will remain same all the time
+hasPath will remain same all the time.
+
+
+And the solution for this is normal DFS of a graph
 */ 
 
 

@@ -2,6 +2,8 @@
 The trick with this question is that we have to
 clear the visited flag after visiting neighbours
 , so that all the paths can be traversed.
+
+Normal DFS is the solution for this problem
 */
 
 
