@@ -19,7 +19,6 @@ let visited = [[0,0,0,0,0,0,0,0],
 
 function traverse(visited,i,j,arr){
     if((visited[i] && visited[i][j] == 1) || i < 0 || i >= arr.length || j >= arr[0].length || j < 0  || arr[i][j] == 0){
-       
         return;
     }    
     visited[i][j]=1;
