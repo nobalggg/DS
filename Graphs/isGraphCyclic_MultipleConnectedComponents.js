@@ -8,15 +8,12 @@
  * 
  * then there is a cycle
  * 
- * The catch is, if there exists mutiple connected component, then below will
+ * To Overcome the catch of normal solution of isGraphCyclic,
  * 
- * fail
+ * make each vertex as starting point
  * 
  */
- 
 
- 
- 
  class Graph{
     constructor(){
         this.adjancecyList = {};
@@ -29,6 +26,16 @@
     addEdge(vertex1,vertex2){
         this.adjancecyList[vertex1].push(vertex2);
         this.adjancecyList[vertex2].push(vertex1);
+    }
+
+    checkForCycleForEachVertex(){
+        for(let item in this.adjancecyList){
+            let isCyclic = this.isGraphCyclic(item);
+            if(isCyclic){
+                return true;
+            }
+        }
+        return false;
     }
 
     isGraphCyclic(start){
@@ -77,7 +84,7 @@ graph.addEdge("E","G");
 graph.addEdge("F","G");
 
 graph.addEdge("O","M");
-graph.addEdge("M","N");
+//graph.addEdge("M","N");
 graph.addEdge("O","N");
 
-console.log(graph.isGraphCyclic("A"))
+console.log(graph.checkForCycleForEachVertex());
