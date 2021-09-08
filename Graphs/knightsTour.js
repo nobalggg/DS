@@ -20,10 +20,6 @@ function traverse(i,j,visited,psf){
     }
     
     visited[i][j] = 1;
-    if(checkIfAllVisited(visited)){
-        console.log('here');
-        //.log(visited)
-    }
     traverse(i+1,j-2,visited);
     traverse(i-1,j-2,visited);
     traverse(i-2,j-1,visited);
